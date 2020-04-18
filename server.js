@@ -45,10 +45,10 @@ app.get('/profile/:id', (req, res) => {profile.handlerProfile(req,res,db)})
 app.put('/image', (req, res) => {image.handlerImage(req,res,db)})
 app.post('/imageurl', (req, res) => {image.handlerApiCall(req,res)})
 
-const 
+const myPORT = process.env.PORT
 
-app.listen(process.env.PORT || 3000, () => {
-	console.log(`app is running on port ${process.env.PORT}`);
+app.listen(myPORT || 3000, () => {
+	console.log(`app is running on port ${myPORT}`);
 })
 
 
